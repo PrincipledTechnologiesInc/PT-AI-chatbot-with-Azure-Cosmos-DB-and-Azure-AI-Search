@@ -1,0 +1,26 @@
+{
+  "Source": "JSON",
+  "Sink": "Cosmos-nosql",
+  "Operations": [
+    {
+      "SourceSettings": {
+        "FilePath": "https://balair.blob.core.windows.net/properties/prop.json"
+      },
+      "SinkSettings": {
+        "ConnectionString": "{{cosmosConnectionString}}",
+        "Database":"database",
+        "Container":"properties",
+        "PartitionKeyPath":"/name",
+        "RecreateContainer": false,
+        "BatchSize": 100,
+        "ConnectionMode": "Direct",
+        "MaxRetryCount": 5,
+        "InitialRetryDurationMs": 200,
+        "CreatedContainerMaxThroughput": 1000,
+        "UseAutoscaleForCreatedContainer": true,
+        "WriteMode": "InsertStream",
+        "IsServerlessAccount": false
+        }
+    }
+  ]
+}

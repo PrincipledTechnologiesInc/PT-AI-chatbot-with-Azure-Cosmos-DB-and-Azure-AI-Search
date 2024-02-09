@@ -1,0 +1,14 @@
+{
+    "FacetedQueryMemorySources": [
+        {
+            "Filter": "entityType__ eq 'Property'",
+            "Facets": [
+                {
+                    "Facet": "category,count:0",
+                    "CountMemoryTemplate": "In the property category named \"{0}\", the Cosmic Works Rental Company sells a total number of {1} properties."
+                }
+            ],
+            "TotalCountMemoryTemplate": "The Cosmic Works Rental Company sells a total number of {0} properties."
+        }
+    ]
+}
